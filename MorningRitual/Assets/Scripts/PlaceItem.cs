@@ -3,6 +3,7 @@ using System.Collections;
 
 public class PlaceItem : MonoBehaviour {
 
+public string destination; 
 private PickUpClick puc; 
 
 	// Use this for initialization
@@ -13,7 +14,7 @@ private PickUpClick puc;
 
 	//When where it needs to be
 	void OnTriggerEnter (Collider other){
-		if (other.tag == "destination"){
+		if (other.tag == destination){
 			puc.hold = false; 
 			Destroy(GetComponent<Rigidbody>()); 
 			transform.position = other.transform.position; 
