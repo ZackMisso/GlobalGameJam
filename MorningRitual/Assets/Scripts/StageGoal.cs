@@ -21,7 +21,10 @@ public class StageGoal : MonoBehaviour {
       // do stuffs
     }
     else if(clickGoal) { // Needs to be tested
-      RaycastHit hit;
+      // does nothing... blah handled by Clickable
+
+      // Rays dont work well
+      /*RaycastHit hit;
       float centerX = Screen.width / 2;
       float centerY = Screen.height / 2;
       Ray ray = Camera.ScreenPointToRay(Vector3(centerX, centerY, 0));
@@ -30,7 +33,8 @@ public class StageGoal : MonoBehaviour {
           // handle Click stuffs if needed
           manager.NextStage();
         }
-      }
+      }*/
+
       //if(hit.collider.tag == "clickableCube"{
       //  //hit.collider.gameObject now refers to the
       //  //cube under the mouse cursor if present
