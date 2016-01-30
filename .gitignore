@@ -9,15 +9,15 @@ Temp/
 # ===================================== #
 ExportedObj/
 obj/
-*.svd
-*.userprefs
-/*.csproj
-*.pidb
-*.suo
-/*.sln
-*.user
-*.unityproj
-*.booproj
+#.svd
+#.userprefs
+#.csproj
+#.pidb
+#.suo
+#*.sln
+#.user
+#.unityproj
+#.booproj
 
 # ============ #
 # OS generated #
