@@ -28,6 +28,7 @@ public class MouseLook : MonoBehaviour {
   float rotationX = 0F;
   float rotationY = 0F;
   Quaternion originalRotation;
+
   void Update ()
   {
     if (axes == RotationAxes.MouseXAndY)
@@ -60,8 +61,8 @@ public class MouseLook : MonoBehaviour {
   void Start ()
   {
     // Make the rigid body not change rotation
-    if (GetComponent<Rigidbody>())
-      GetComponent<Rigidbody>().freezeRotation = true;
+    //if (GetComponent<Rigidbody>())
+    //  GetComponent<Rigidbody>().freezeRotation = true;
     originalRotation = transform.localRotation;
   }
 
