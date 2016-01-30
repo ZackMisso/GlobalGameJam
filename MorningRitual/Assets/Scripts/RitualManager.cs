@@ -27,12 +27,30 @@ public class RitualManager : MonoBehaviour {
         {
             startDelay -= Time.deltaTime;
             if (startDelay <= 0)
-                myStage = RitualStage.bathroom;
+                NextStage();
         }
 	}
 
     void NextStage()
     {
-
+        switch (myStage)
+        {
+            case RitualStage.start:
+                SetBathroomStage();
+                break;
+            default:
+                myStage = RitualStage.done;
+                break;
+        }
     }
+
+    void SetBathroomStage() {
+        myStage = RitualStage.bathroom;
+        myStageGoal.walkGoal = false;
+        myStageGoal.clickGoal = true;
+        myStageGoal.dropGoal = false;
+        myStageGoal.keyObject = toilet;
+        myStageGoal.placeGoal = null;
+    }
+
 }
