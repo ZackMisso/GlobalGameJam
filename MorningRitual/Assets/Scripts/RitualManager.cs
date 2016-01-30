@@ -3,6 +3,7 @@ using System.Collections;
 
 public class RitualManager : MonoBehaviour {
 
+    // all the stages of our ritual
     public enum RitualStage
     {
         start, bathroom, shower, getDressed, breakfast, coffee, leave, done
