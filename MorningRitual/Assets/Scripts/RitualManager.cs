@@ -6,13 +6,14 @@ public class RitualManager : MonoBehaviour {
     // all the stages of our ritual
     public enum RitualStage
     {
-        start, bathroom, shower, getDressed, breakfast, coffeeDropCup, coffeeMake, coffeeDrink, leave, done
+        start, bathroom, shower, getDressed, breakfast,
+        drawerOpen, coffeeDropCup, coffeeMake, coffeeDrink, leave, done
     }
 
     public RitualStage myStage;
     float startDelay;
 
-    public GameObject toilet, showerKnob, closet, eggs, cup, coffeeMaker, frontDoor;
+    public GameObject toilet, showerKnob, closet, eggs, drawer, cup, coffeeMaker, frontDoor;
     public PlaceItem showerKnobPlace, fryingPan, cupPlace;
     public StageGoal myStageGoal;
 
@@ -53,13 +54,16 @@ public class RitualManager : MonoBehaviour {
                 SetBreakfastStage();
                 break;
             case RitualStage.breakfast:
+                SetDrawerOpenStage();
+                break;
+            case RitualStage.drawerOpen:
                 SetCoffeeCupStage();
                 break;
             case RitualStage.coffeeDropCup:
-                SetLeaveStage();
+                SetCoffeeMakeStage();
                 break;
             case RitualStage.coffeeMake:
-                SetLeaveStage();
+                SetCoffeeDrinkStage();
                 break;
             case RitualStage.coffeeDrink:
                 SetLeaveStage();
@@ -121,6 +125,20 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.keyObject = eggs;
         myStageGoal.placeGoal = fryingPan;
         myStageGoal.placeGoal.currentGoal = myStageGoal;
+    }
+
+    // setup the cofee drop cup in the coffee maker stage and related objects and flags
+    // pick up the cup and drop it in the coffee maker
+    void SetDrawerOpenStage()
+    {
+        myStage = RitualStage.drawerOpen;
+        myStageGoal.walkGoal = false;
+        myStageGoal.clickGoal = true;
+        myStageGoal.dropGoal = false;
+        myStageGoal.keyObject = drawer;
+        myStageGoal.placeGoal = null;
+        drawer.AddComponent<Clickable>();
+        drawer.GetComponent<Clickable>().SetStageGoal(myStageGoal);
     }
 
     // setup the cofee drop cup in the coffee maker stage and related objects and flags
