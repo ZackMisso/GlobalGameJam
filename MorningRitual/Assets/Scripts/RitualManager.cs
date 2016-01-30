@@ -124,8 +124,8 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.clickGoal = false;
         myStageGoal.dropGoal = true;
         myStageGoal.keyObject = eggs;
-        myStageGoal.placeGoal = fryingPan;
-        myStageGoal.placeGoal.currentGoal = myStageGoal;
+        //myStageGoal.placeGoal = fryingPan;
+        //myStageGoal.placeGoal.currentGoal = myStageGoal;
     }
 
     // setup the cofee drop cup in the coffee maker stage and related objects and flags
@@ -151,8 +151,8 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.clickGoal = false;
         myStageGoal.dropGoal = true;
         myStageGoal.keyObject = cup;
-        myStageGoal.placeGoal = cupPlace;
-        myStageGoal.placeGoal.currentGoal = myStageGoal;
+        //myStageGoal.placeGoal = cupPlace;
+        //myStageGoal.placeGoal.currentGoal = myStageGoal;
     }
 
     // setup the cofee stage and related objects and flags
