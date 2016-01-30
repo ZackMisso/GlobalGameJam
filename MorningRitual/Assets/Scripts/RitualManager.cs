@@ -20,6 +20,8 @@ public class RitualManager : MonoBehaviour {
 	void Start () {
         myStage = RitualStage.start;
         startDelay = 5f;
+        gameObject.AddComponent<StageGoal>();
+        myStageGoal = GetComponent<StageGoal>();
     }
 
 	// Update is called once per frame
