@@ -1,8 +1,6 @@
 # =============== #
 # Unity generated #
 # =============== #
-Temp/
-Library/ # I think this is needed
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
@@ -17,7 +15,7 @@ obj/
 *.sln
 *.user
 #.unityproj
-.booproj
+*.booproj
 
 # ============ #
 # OS generated #
@@ -29,3 +27,19 @@ obj/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Bb]uilds/
+/Assets/AssetStoreTools*
+
+# Unity3D generated meta files
+*.pidb.meta
+
+# Unity3D Generated File On Crash Reports
+sysinfo.txt
+
+# Builds
+*.apk
