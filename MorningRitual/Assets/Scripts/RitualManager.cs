@@ -34,7 +34,7 @@ public class RitualManager : MonoBehaviour {
 
     // function that transitions to the next stage 
     // assuming that the completed conditions are met
-    void NextStage()
+    public void NextStage()
     {
         switch (myStage)
         {
@@ -91,6 +91,7 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.dropGoal = true;
         myStageGoal.keyObject = showerKnob;
         myStageGoal.placeGoal = showerKnobPlace;
+        myStageGoal.placeGoal.currentGoal = myStageGoal;
     }
 
     // setup the get dresses stage and related objects and flags
@@ -117,6 +118,7 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.dropGoal = true;
         myStageGoal.keyObject = eggs;
         myStageGoal.placeGoal = fryingPan;
+        myStageGoal.placeGoal.currentGoal = myStageGoal;
     }
 
     // setup the cofee drop cup in the coffee maker stage and related objects and flags
@@ -129,6 +131,7 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.dropGoal = true;
         myStageGoal.keyObject = cup;
         myStageGoal.placeGoal = cupPlace;
+        myStageGoal.placeGoal.currentGoal = myStageGoal;
     }
 
     // setup the cofee stage and related objects and flags
