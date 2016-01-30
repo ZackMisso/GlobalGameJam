@@ -17,6 +17,8 @@ public class StageGoal : MonoBehaviour {
     if(walkGoal) {
       // do stuffs
     }
+
+    // These two should be handled elsewhere
     else if(dropGoal) {
       // do stuffs
     }

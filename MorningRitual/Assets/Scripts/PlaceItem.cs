@@ -3,8 +3,9 @@ using System.Collections;
 
 public class PlaceItem : MonoBehaviour {
 
-public string destination; 
-private PickUpClick puc; 
+public StageGoal currentGoal;
+public string destination;
+private PickUpClick puc;
 
 	// Use this for initialization
 	void Start () {
@@ -14,12 +15,13 @@ private PickUpClick puc;
 
 	//When where it needs to be
 	void OnTriggerEnter (Collider other){
-		if (other.tag == destination){
-			puc.hold = false; 
-			Destroy(GetComponent<Rigidbody>()); 
-			transform.position = other.transform.position; 
+		if (other.gameObject == currentGoal.keyObject){
+			puc.hold = false;
+			Destroy(GetComponent<Rigidbody>());
+			transform.position = other.transform.position;
 			transform.forward = other.transform.forward;
-			transform.up = other.transform.up; 
+			transform.up = other.transform.up;
+			currentGoal.manager.NextStage();
 		}
 	}
 }
