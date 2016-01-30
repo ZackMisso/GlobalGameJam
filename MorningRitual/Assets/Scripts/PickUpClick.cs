@@ -19,6 +19,9 @@ private bool hold;
 			//pos is the new position of the object = player position pluss offset (off)
 			Vector3 pos = looker.transform.position + off; 
 			transform.position = pos; 
+			if (Input.GetMouseButtonDown(1)){
+				hold = false; 
+			}
 		}
 	}
 
@@ -26,9 +29,6 @@ private bool hold;
 	void OnMouseDown(){
 		if(hold == false){
 			hold = true; 
-		}
-		else{
-			hold = false; 	
 		}
 	}
 }
