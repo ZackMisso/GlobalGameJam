@@ -2,22 +2,22 @@
 # Unity generated #
 # =============== #
 Temp/
-# Library/ # I think this is needed
+Library/ # I think this is needed
 
 # ===================================== #
 # Visual Studio / MonoDevelop generated #
 # ===================================== #
 ExportedObj/
 obj/
-#.svd
-#.userprefs
-#.csproj
-#.pidb
-#.suo
-#*.sln
-#.user
+*.svd
+*.userprefs
+*.csproj
+*.pidb
+*.suo
+*.sln
+*.user
 #.unityproj
-#.booproj
+.booproj
 
 # ============ #
 # OS generated #
