@@ -13,7 +13,7 @@ public class RitualManager : MonoBehaviour {
     float startDelay;
 
     public GameObject toilet, showerKnob, closet, eggs, cup, coffeeMaker, frontDoor;
-    PlaceItem showerKnobPlace, fryingPan, cupPlace;
+    public PlaceItem showerKnobPlace, fryingPan, cupPlace;
     public StageGoal myStageGoal;
 
 	// Use this for initialization
