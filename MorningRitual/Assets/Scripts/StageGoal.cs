@@ -5,7 +5,7 @@ public class StageGoal : MonoBehaviour {
   //public GameObject player;
   public RitualManager manager;
   public GameObject keyObject;
-  public PlaceItem placeGoal;
+  //public PlaceItem placeGoal;
   public bool walkGoal;
   public bool dropGoal;
   public bool clickGoal;

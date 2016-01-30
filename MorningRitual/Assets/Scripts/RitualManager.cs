@@ -85,7 +85,6 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.keyObject = toilet;
         toilet.AddComponent<Clickable>();
         toilet.GetComponent<Clickable>().SetStageGoal(myStageGoal);
-        myStageGoal.placeGoal = null;
     }
 
     // setup the shower stage and related objects and flags
@@ -112,7 +111,6 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.keyObject = closet;
         closet.AddComponent<Clickable>();
         closet.GetComponent<Clickable>().SetStageGoal(myStageGoal);
-        myStageGoal.placeGoal = null;
     }
 
     // setup the breakfast stage and related objects and flags
@@ -124,8 +122,8 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.clickGoal = false;
         myStageGoal.dropGoal = true;
         myStageGoal.keyObject = eggs;
-        //myStageGoal.placeGoal = fryingPan;
-        //myStageGoal.placeGoal.currentGoal = myStageGoal;
+        PlaceItem pi = eggs.GetComponent<PlaceItem>();
+        pi.currentGoal = myStageGoal;
     }
 
     // setup the cofee drop cup in the coffee maker stage and related objects and flags
@@ -137,7 +135,6 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.clickGoal = true;
         myStageGoal.dropGoal = false;
         myStageGoal.keyObject = drawer;
-        myStageGoal.placeGoal = null;
         drawer.AddComponent<Clickable>();
         drawer.GetComponent<Clickable>().SetStageGoal(myStageGoal);
     }
@@ -151,8 +148,8 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.clickGoal = false;
         myStageGoal.dropGoal = true;
         myStageGoal.keyObject = cup;
-        //myStageGoal.placeGoal = cupPlace;
-        //myStageGoal.placeGoal.currentGoal = myStageGoal;
+        PlaceItem pi = cup.GetComponent<PlaceItem>();
+        pi.currentGoal = myStageGoal;
     }
 
     // setup the cofee stage and related objects and flags
@@ -166,7 +163,6 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.keyObject = coffeeMaker;
         coffeeMaker.AddComponent<Clickable>();
         coffeeMaker.GetComponent<Clickable>().SetStageGoal(myStageGoal);
-        myStageGoal.placeGoal = null;
     }
 
     // setup the drink cofee stage and related objects and flags
@@ -180,7 +176,6 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.keyObject = cup;
         cup.AddComponent<Clickable>();
         cup.GetComponent<Clickable>().SetStageGoal(myStageGoal);
-        myStageGoal.placeGoal = null;
     }
 
     // setup the leave the house stage and related objects and flags
@@ -192,6 +187,5 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.clickGoal = false;
         myStageGoal.dropGoal = false;
         myStageGoal.keyObject = frontDoor;
-        myStageGoal.placeGoal = null;
     }
 }
