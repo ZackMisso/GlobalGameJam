@@ -13,6 +13,7 @@ public class RitualManager : MonoBehaviour {
     float startDelay;
 
     public GameObject toilet, showerKnob, showerKnobPlace, closet;
+    public StageGoal myStageGoal;
 
 	// Use this for initialization
 	void Start () {
@@ -29,4 +30,9 @@ public class RitualManager : MonoBehaviour {
                 myStage = RitualStage.bathroom;
         }
 	}
+
+    void NextStage()
+    {
+
+    }
 }
