@@ -9,13 +9,14 @@ public class StageGoal : MonoBehaviour {
   public bool walkGoal;
   public bool dropGoal;
   public bool clickGoal;
+  public bool active=false;
 
   public StageGoal() {
     manager = GetComponent<RitualManager>();
   }
 
   public void Update() {
-    if(walkGoal) {
+    if(walkGoal&&active) {
       SphereCollider collider = keyObject.GetComponent<SphereCollider>();
       Vector3 position = transform.position;
       Vector3 cent = collider.center;
@@ -23,6 +24,7 @@ public class StageGoal : MonoBehaviour {
       float distance = (cent-position).magnitude;
       if(radius > distance) {
         // Handle stage Transition maybe
+        active = false;
         manager.NextStage();
       }
     }
