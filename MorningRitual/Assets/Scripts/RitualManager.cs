@@ -26,7 +26,7 @@ public class RitualManager : MonoBehaviour {
 		ui = bar.GetComponent<UI>();
         myStage = RitualStage.start;
         startDelay = 5f;
-        endDelay = 15f;
+        endDelay = 10f;
         gameObject.AddComponent<StageGoal>();
         myStageGoal = GetComponent<StageGoal>();
         myStageGoal.manager = this;
