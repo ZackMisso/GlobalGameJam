@@ -5,17 +5,16 @@ public class PlaceItem : MonoBehaviour {
 
 	public StageGoal currentGoal;
 	public GameObject destination;
-	private PickUpClick puc;
+	public PickUpClick puc;
 
 	//When where it needs to be
 	void OnTriggerEnter (Collider other){
-		if (other.gameObject == destination){
-			puc.hold = false;
+		if (other.gameObject == destination && !puc.hold){
 			Destroy(GetComponent<Rigidbody>());
 			transform.position = other.transform.position;
 			transform.forward = other.transform.forward;
 			transform.up = other.transform.up;
-            puc.active = false;
+      puc.active = false;
 			currentGoal.manager.NextStage();
 		}
 	}

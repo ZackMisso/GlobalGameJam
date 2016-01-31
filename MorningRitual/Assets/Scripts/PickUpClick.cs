@@ -1,6 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+//https://www.youtube.com/watch?v=jOOdJZS987Y33344r4r
+
 public class PickUpClick : MonoBehaviour {
     public GameObject looker; //refers to player or camera, assumes mouse follows it
     public float distance;
