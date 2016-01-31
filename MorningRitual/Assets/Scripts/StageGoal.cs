@@ -25,6 +25,7 @@ public class StageGoal : MonoBehaviour {
       if(radius > distance) {
         // Handle stage Transition maybe
         active = false;
+        Fabric.EventManager.Instance.PostEvent("DoorClose", gameObject);
         manager.NextStage();
       }
     }
