@@ -14,7 +14,7 @@ public class RitualManager : MonoBehaviour {
     float startDelay, endDelay;
     public string successJingle; // for the success jingle
 
-    public GameObject toilet, showerKnob, closet, eggs, drawer, cup, coffeeMaker, frontDoor;
+    public GameObject toilet, shower, closet, eggs, drawer, cup, coffeeMaker, frontDoor;
     public StageGoal myStageGoal;
 
     //UI Interaction
@@ -114,10 +114,12 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.walkGoal = false;
         myStageGoal.clickGoal = false;
         myStageGoal.dropGoal = true;
-        myStageGoal.keyObject = showerKnob;
-        PlaceItem pi = showerKnob.GetComponent<PlaceItem>();
-        pi.currentGoal = myStageGoal;
-        showerKnob.GetComponent<PickUpClick>().active = true;
+        myStageGoal.keyObject = shower;
+        shower.GetComponent<Clickable>().SetStageGoal(myStageGoal);
+        shower.GetComponent<Clickable>().active = true;
+        //PlaceItem pi = showerKnob.GetComponent<PlaceItem>();
+        //pi.currentGoal = myStageGoal;
+        //showerKnob.GetComponent<PickUpClick>().active = true;
     }
 
     // setup the get dresses stage and related objects and flags
