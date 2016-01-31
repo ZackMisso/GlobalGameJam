@@ -12,17 +12,18 @@ public class RitualManager : MonoBehaviour {
 
     public RitualStage myStage;
     float startDelay;
+    public string successJingle; // for the success jingle
 
     public GameObject toilet, showerKnob, closet, eggs, drawer, cup, coffeeMaker, frontDoor;
     public StageGoal myStageGoal;
 
     //UI Interaction
-    private UI ui; 
-    public Canvas bar; 
+    private UI ui;
+    public Canvas bar;
 
 	// Use this for initialization
 	void Start () {
-		ui = bar.GetComponent<UI>(); 
+		ui = bar.GetComponent<UI>();
         myStage = RitualStage.start;
         startDelay = 5f;
         gameObject.AddComponent<StageGoal>();
@@ -38,7 +39,7 @@ public class RitualManager : MonoBehaviour {
             startDelay -= Time.deltaTime;
             if (startDelay <= 0)
                 NextStage();
-            
+
         }
 	}
 
@@ -47,12 +48,13 @@ public class RitualManager : MonoBehaviour {
     public void NextStage()
     {
     	if (myStage != RitualStage.start){
-    		ui.Progress(); 
+        Fabric.EventManager.Instance.PostEvent(successJingle, gameObject);
+    		ui.Progress();
     	}
         switch (myStage)
         {
             case RitualStage.start:
-            	Debug.Log("whatever I want"); 
+            	Debug.Log("whatever I want");
                 SetBathroomStage();
                 break;
             case RitualStage.bathroom:
@@ -129,7 +131,7 @@ public class RitualManager : MonoBehaviour {
     // setup the breakfast stage and related objects and flags
     // pick up eggs and drop in the frying pan
     void SetBreakfastStage()
-    { 
+    {
         myStage = RitualStage.breakfast;
         myStageGoal.walkGoal = false;
         myStageGoal.clickGoal = false;
@@ -157,7 +159,7 @@ public class RitualManager : MonoBehaviour {
     // setup the cofee drop cup in the coffee maker stage and related objects and flags
     // pick up the cup and drop it in the coffee maker
     void SetCoffeeCupStage()
-    { 
+    {
         myStage = RitualStage.coffeeDropCup;
         myStageGoal.walkGoal = false;
         myStageGoal.clickGoal = false;
