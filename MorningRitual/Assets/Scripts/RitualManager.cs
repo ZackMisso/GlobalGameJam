@@ -11,7 +11,7 @@ public class RitualManager : MonoBehaviour {
     }
 
     public RitualStage myStage;
-    float startDelay;
+    float startDelay, endDelay;
     public string successJingle; // for the success jingle
 
     public GameObject toilet, showerKnob, closet, eggs, drawer, cup, coffeeMaker, frontDoor;
@@ -26,6 +26,7 @@ public class RitualManager : MonoBehaviour {
 		ui = bar.GetComponent<UI>();
         myStage = RitualStage.start;
         startDelay = 5f;
+        endDelay = 2f;
         gameObject.AddComponent<StageGoal>();
         myStageGoal = GetComponent<StageGoal>();
         myStageGoal.manager = this;
@@ -40,6 +41,12 @@ public class RitualManager : MonoBehaviour {
             if (startDelay <= 0)
                 NextStage();
 
+        }
+        else if (myStage == RitualStage.done)
+        {
+            endDelay -= Time.deltaTime;
+            if (endDelay <= 0)
+                Application.LoadLevel("mainMenu");
         }
 	}
 
