@@ -14,7 +14,7 @@ public class RitualManager : MonoBehaviour {
     float startDelay, endDelay;
     public string successJingle; // for the success jingle
 
-    public GameObject toilet, shower, closet, eggs, drawer, cup, coffeeMaker, frontDoor;
+    public GameObject toilet, shower, cloths, eggs, drawer, cup, coffeeMaker, frontDoor;
     public StageGoal myStageGoal;
 
     //UI Interaction
@@ -130,10 +130,9 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.walkGoal = false;
         myStageGoal.clickGoal = true;
         myStageGoal.dropGoal = false;
-        myStageGoal.keyObject = closet;
-        closet.AddComponent<Clickable>();
-        closet.GetComponent<Clickable>().SetStageGoal(myStageGoal);
-        closet.GetComponent<Clickable>().active = true;
+        myStageGoal.keyObject = cloths;
+        cloths.GetComponent<Clickable>().SetStageGoal(myStageGoal);
+        cloths.GetComponent<Clickable>().active = true;
     }
 
     // setup the breakfast stage and related objects and flags
