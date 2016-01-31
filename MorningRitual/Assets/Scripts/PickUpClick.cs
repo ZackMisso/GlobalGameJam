@@ -5,6 +5,7 @@ using System.Collections;
 
 public class PickUpClick : MonoBehaviour {
     public GameObject looker; //refers to player or camera, assumes mouse follows it
+    public string audioTag;
     public float distance;
     public float minDistance=3.0f;
     public bool hold;
@@ -36,8 +37,10 @@ public class PickUpClick : MonoBehaviour {
     // When Clicked
     void OnMouseDown() {
 		if(active && checkDistance())
-			if(hold == false)
+			if(hold == false){
 				hold = true;
+        Fabric.EventManager.Instance.PostEvent(audioTag, gameObject);
+      }
 	}
 
 	private bool checkDistance() {

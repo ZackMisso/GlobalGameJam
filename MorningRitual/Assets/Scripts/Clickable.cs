@@ -3,6 +3,7 @@ using System.Collections;
 
 public class Clickable : MonoBehaviour {
   public StageGoal currentGoal;
+  public string audioTag;
   public bool active=false;
 
   public void SetStageGoal(StageGoal param) {
@@ -10,8 +11,10 @@ public class Clickable : MonoBehaviour {
   }
 
   public void OnMouseDown() {
+    Fabric.EventManager.Instance.PostEvent(audioTag, gameObject);
     if(active) {
       active = false;
+      //Fabric.EventManager.Instance.PostEvent(audioTag, this);
       currentGoal.manager.NextStage();
     }
   }

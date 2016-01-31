@@ -6,6 +6,7 @@ public class PlaceItem : MonoBehaviour {
 	public StageGoal currentGoal;
 	public GameObject destination;
 	public PickUpClick puc;
+	public string audioTag;
     public bool insideSphere;
     private Collider theOther;
 
@@ -43,6 +44,7 @@ public class PlaceItem : MonoBehaviour {
             puc.active = false;
             insideSphere = false;
             theOther.enabled = false;
+						Fabric.EventManager.Instance.PostEvent(audioTag, gameObject);
             currentGoal.manager.NextStage();
         }
     }
