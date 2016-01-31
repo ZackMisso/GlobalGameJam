@@ -33,6 +33,7 @@ public class RitualManager : MonoBehaviour {
             startDelay -= Time.deltaTime;
             if (startDelay <= 0)
                 NextStage();
+            
         }
 	}
 
@@ -83,7 +84,7 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.clickGoal = true;
         myStageGoal.dropGoal = false;
         myStageGoal.keyObject = toilet;
-        toilet.AddComponent<Clickable>();
+        //toilet.AddComponent<Clickable>();
         toilet.GetComponent<Clickable>().SetStageGoal(myStageGoal);
         toilet.GetComponent<Clickable>().active = true;
     }
@@ -119,7 +120,7 @@ public class RitualManager : MonoBehaviour {
     // setup the breakfast stage and related objects and flags
     // pick up eggs and drop in the frying pan
     void SetBreakfastStage()
-    { // TO BE FIXED
+    { 
         myStage = RitualStage.breakfast;
         myStageGoal.walkGoal = false;
         myStageGoal.clickGoal = false;
@@ -139,7 +140,7 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.clickGoal = true;
         myStageGoal.dropGoal = false;
         myStageGoal.keyObject = drawer;
-        drawer.AddComponent<Clickable>();
+        //drawer.AddComponent<Clickable>();
         drawer.GetComponent<Clickable>().SetStageGoal(myStageGoal);
         drawer.GetComponent<Clickable>().active = true;
     }
@@ -167,7 +168,7 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.clickGoal = true;
         myStageGoal.dropGoal = false;
         myStageGoal.keyObject = coffeeMaker;
-        coffeeMaker.AddComponent<Clickable>();
+        //coffeeMaker.AddComponent<Clickable>();
         coffeeMaker.GetComponent<Clickable>().SetStageGoal(myStageGoal);
         coffeeMaker.GetComponent<Clickable>().active = true;
     }
@@ -181,7 +182,7 @@ public class RitualManager : MonoBehaviour {
         myStageGoal.clickGoal = true;
         myStageGoal.dropGoal = false;
         myStageGoal.keyObject = cup;
-        cup.AddComponent<Clickable>();
+        //cup.AddComponent<Clickable>();
         cup.GetComponent<Clickable>().SetStageGoal(myStageGoal);
         cup.GetComponent<Clickable>().active = true;
     }

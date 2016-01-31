@@ -1,0 +1,17 @@
+Clickable objects
+Add Clickable script to them.
+
+Pickable objects
+Add PickUpClick script
+Add PlaceItem script
+Drag the Pick Up Script over the Puc attribute in Place Item
+Add a Rigidbody that doesn't use gravity
+Drag the destination object over the Destination attribute in Place Item
+Drag the camera over the Looker attribute in Pick Up Click
+Set the Min Distance in the PickUpClick to 3 (or something)
+
+Destination object
+Needs a sphere collider with isTrigger on
+Needs to be at the place where the object goes. 
+
+Front door needs a sphere collider that is Trigger.

@@ -19,7 +19,7 @@ public class StageGoal : MonoBehaviour {
     if(walkGoal&&active) {
       SphereCollider collider = keyObject.GetComponent<SphereCollider>();
       Vector3 position = transform.position;
-      Vector3 cent = collider.center;
+      Vector3 cent = collider.center + collider.gameObject.transform.position;
       float radius = collider.radius;
       float distance = (cent-position).magnitude;
       if(radius > distance) {
