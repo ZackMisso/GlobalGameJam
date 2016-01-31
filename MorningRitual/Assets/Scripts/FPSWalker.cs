@@ -18,11 +18,12 @@ public class FPSWalker : MonoBehaviour {
     moveDirection *= speed;
 
 		if (moveDirection.magnitude >= 0.3f) {
-			Debug.Log ("walking");
+			//Debug.Log ("walking");
 			Fabric.EventManager.Instance.PostEvent("PlayFootsteps", gameObject);
-		} else if (moveDirection.magnitude < 0.3) {
-			Debug.Log ("not walking");
-		}
+		} 
+		//else if (moveDirection.magnitude < 0.3) {
+		//	Debug.Log ("not walking");
+		//}
 
     if (GetComponent<Rigidbody>())
       GetComponent<Rigidbody>().velocity = new Vector3(moveDirection.x,0,moveDirection.z);
