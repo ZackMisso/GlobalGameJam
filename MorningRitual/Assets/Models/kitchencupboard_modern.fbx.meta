@@ -33,6 +33,7 @@ ModelImporter:
     2300010: polySurface16
     2300012: polySurface17
     2300014: polySurface18
+    2300016: //RootNode
     3300000: pCylinder10
     3300002: pCylinder11
     3300004: pCylinder9
@@ -41,6 +42,7 @@ ModelImporter:
     3300010: polySurface16
     3300012: polySurface17
     3300014: polySurface18
+    3300016: //RootNode
     4300000: polySurface14
     4300002: polySurface15
     4300004: polySurface16
