@@ -2,9 +2,9 @@
 using System.Collections;
 
 public class PickUpClick : MonoBehaviour {
-
     public GameObject looker; //refers to player or camera, assumes mouse follows it
     public float distance;
+    public float minDistance;
     public bool hold;
     public bool active;
 
