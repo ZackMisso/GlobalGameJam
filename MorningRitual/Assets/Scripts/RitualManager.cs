@@ -16,8 +16,13 @@ public class RitualManager : MonoBehaviour {
     public GameObject toilet, showerKnob, closet, eggs, drawer, cup, coffeeMaker, frontDoor;
     public StageGoal myStageGoal;
 
+    //UI Interaction
+    private UI ui; 
+    public Canvas bar; 
+
 	// Use this for initialization
 	void Start () {
+		ui = bar.GetComponent<UI>(); 
         myStage = RitualStage.start;
         startDelay = 5f;
         gameObject.AddComponent<StageGoal>();
@@ -41,9 +46,13 @@ public class RitualManager : MonoBehaviour {
     // assuming that the completed conditions are met
     public void NextStage()
     {
+    	if (myStage != RitualStage.start){
+    		ui.Progress(); 
+    	}
         switch (myStage)
         {
             case RitualStage.start:
+            	Debug.Log("whatever I want"); 
                 SetBathroomStage();
                 break;
             case RitualStage.bathroom:

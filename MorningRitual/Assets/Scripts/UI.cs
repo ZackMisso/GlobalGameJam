@@ -11,12 +11,16 @@ public float numStages;
 
 	// Use this for initialization
 	void Start () {
-		progress.minValue = -1; 
+		progress.minValue = 0; 
 		progress.maxValue = numStages; 	
+		progress.value = 0; 
 	}
 
 	//Incriment the slider on completing a task
 	public void Progress () {
+		if (progress == null) {
+			Debug.Log("some"); 
+		}
 		progress.value = progress.value + 1; 
 	}
 
