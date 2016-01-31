@@ -73,20 +73,22 @@ public class RitualManager : MonoBehaviour {
                 SetBreakfastStage();
                 break;
             case RitualStage.breakfast:
-                SetDrawerOpenStage();
-                break;
-            case RitualStage.drawerOpen:
-                SetCoffeeCupStage();
-                break;
-            case RitualStage.coffeeDropCup:
-                SetCoffeeMakeStage();
-                break;
-            case RitualStage.coffeeMake:
-                SetCoffeeDrinkStage();
-                break;
-            case RitualStage.coffeeDrink:
-                SetLeaveStage();
-                break;
+              myStage = RitualStage.done;
+              break;
+            //    SetCoffeeCupStage();
+            //    break;
+            //case RitualStage.drawerOpen:
+            //    SetCoffeeCupStage();
+            //    break;
+            //case RitualStage.coffeeDropCup:
+            //    SetCoffeeMakeStage();
+            //    break;
+            //case RitualStage.coffeeMake:
+            //    SetCoffeeDrinkStage();
+            //    break;
+            //case RitualStage.coffeeDrink:
+            //    SetLeaveStage();
+            //    break;
             default:
                 myStage = RitualStage.done;
                 break;
@@ -151,7 +153,7 @@ public class RitualManager : MonoBehaviour {
 
     // setup the cofee drop cup in the coffee maker stage and related objects and flags
     // pick up the cup and drop it in the coffee maker
-    void SetDrawerOpenStage()
+    /*void SetDrawerOpenStage()
     {
         myStage = RitualStage.drawerOpen;
         myStageGoal.walkGoal = false;
@@ -161,7 +163,7 @@ public class RitualManager : MonoBehaviour {
         //drawer.AddComponent<Clickable>();
         drawer.GetComponent<Clickable>().SetStageGoal(myStageGoal);
         drawer.GetComponent<Clickable>().active = true;
-    }
+    }*/
 
     // setup the cofee drop cup in the coffee maker stage and related objects and flags
     // pick up the cup and drop it in the coffee maker
