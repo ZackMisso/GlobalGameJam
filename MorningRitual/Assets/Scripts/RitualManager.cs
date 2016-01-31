@@ -54,7 +54,6 @@ public class RitualManager : MonoBehaviour {
         switch (myStage)
         {
             case RitualStage.start:
-            	Debug.Log("whatever I want");
                 SetBathroomStage();
                 break;
             case RitualStage.bathroom:
