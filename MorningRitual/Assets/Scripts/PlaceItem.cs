@@ -15,6 +15,7 @@ public class PlaceItem : MonoBehaviour {
 			transform.position = other.transform.position;
 			transform.forward = other.transform.forward;
 			transform.up = other.transform.up;
+            puc.active = false;
 			currentGoal.manager.NextStage();
 		}
 	}

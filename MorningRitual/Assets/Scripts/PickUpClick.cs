@@ -3,13 +3,15 @@ using System.Collections;
 
 public class PickUpClick : MonoBehaviour {
 
-public GameObject looker; //refers to player or camera, assumes mouse follows it
-public float distance; 
-public bool hold; 
+    public GameObject looker; //refers to player or camera, assumes mouse follows it
+    public float distance; 
+    public bool hold;
+    public bool active;
 
 	// Use this for initialization
 	void Start () {
-		hold = false; 
+		hold = false;
+        active = false;
 	}
 
 	void Update () {
@@ -29,7 +31,7 @@ public bool hold;
 
 	//When clicked
 	void OnMouseDown(){
-		if(hold == false){
+		if(active && hold == false){
 			hold = true; 
 		}
 	}
