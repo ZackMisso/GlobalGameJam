@@ -1,0 +1,50 @@
+Initialize engine version: 5.3.2f1 (e87ab445ead0)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: Intel(R) HD Graphics 4600 (ID=0x416)
+    Vendor:   Intel
+    VRAM:     2103 MB
+Begin MonoManager ReloadAssembly
+Platform assembly: C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\Fabric.AudioSpline.dll (this message is harmless)
+Loading C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\Fabric.AudioSpline.dll into Unity Child Domain
+Platform assembly: C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\Fabric.Core.dll (this message is harmless)
+Loading C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\Fabric.Core.dll into Unity Child Domain
+Platform assembly: C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\Fabric.LoudnessMeter.dll (this message is harmless)
+Loading C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\Fabric.LoudnessMeter.dll into Unity Child Domain
+Platform assembly: C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\Fabric.ModularSynth.dll (this message is harmless)
+Loading C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\Fabric.ModularSynth.dll into Unity Child Domain
+- Completed reload, in  0.049 seconds
+Platform assembly: C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Dana\Documents\develop\ggj16\GlobalGameJam\GlobalGameJam\MorningRitual\winapp\morning_Data\Managed\System.dll (this message is harmless)
+<RI> Initializing input.
+XInput1_3.dll not found. Trying XInput9_1_0.dll instead...
+<RI> Input initialized.
+desktop: 1920x1080 60Hz; virtual: 1920x1080 at 0,0
+<RI> Initialized touch support.
+UnloadTime: 0.592727 ms
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 1478 -> priority: 1 
+  Thread -> id: 2d9c -> priority: 1 
+Unloading 5 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 4.312453 ms
+
+Unloading 119 unused Assets to reduce memory usage. Loaded Objects now: 665.
+Total: 1.013537 ms (FindLiveObjects: 0.052173 ms CreateObjectMapping: 0.023093 ms MarkObjects: 0.739839 ms  DeleteObjects: 0.197575 ms)
+
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 1.749528 ms
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1508.
+Total: 1.827361 ms (FindLiveObjects: 0.089379 ms CreateObjectMapping: 0.033784 ms MarkObjects: 1.690940 ms  DeleteObjects: 0.012829 ms)
+
